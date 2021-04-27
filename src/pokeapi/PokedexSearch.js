@@ -5,11 +5,7 @@ import { useForm } from "react-hook-form";
 
 export function PokedexSearch() {
   const [pokemonImage, setPokemonImage] = useState(null);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
     const pokemon = await fectchPokemonData(data.pokemon);
